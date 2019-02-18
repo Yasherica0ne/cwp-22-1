@@ -1,8 +1,8 @@
 const config = require('./package.json');
 console.log(`Welcome! version: ${config.version}`)
-module.exports = (str) => {
+const polish_recursive = (str) => {
     let stack = str.split(' ');
-    const count = stack.length;NavigationPreloadManagerm
+    const count = stack.length;
     if (count > 1) {
         const signs = ['-', '+', '*', '/'];
         for (let i = 0; i < count; i++) {
@@ -29,3 +29,5 @@ module.exports = (str) => {
     }
     return (str);
 }
+
+module.exports = polish_recursive;
